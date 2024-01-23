@@ -1,0 +1,205 @@
+
+:root
+{
+    --image-height:500px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+
+
+
+.wrapper
+{
+    height: 100vh;
+    perspective: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+}
+.container-0
+{
+    height: 100px ;
+    /* background-color: antiquewhite; */
+    position: relative;
+    width: 100vw;
+}
+
+.navbar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    /* position: fixed; */
+    width: 100%;
+    z-index:4 ;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 20px;
+}
+
+.navbar-text
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+    padding: 30px;
+    gap: 20px;
+    
+}
+.navbar-text ul
+{
+    list-style: none;
+
+}
+.navbar-subtext
+{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+.navbar-subtext:hover
+{
+    color: rgb(58, 50, 50);
+}
+
+.navbar-logo img 
+{
+    height: 20px;
+    width: 200px;
+}
+
+
+.container-1
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.background
+{
+    transform: translateZ(-60px) scale(8);
+}
+
+.foreground
+{
+    transform: translateZ(-20px) scale(3);
+}
+
+
+.background, .foreground
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heading
+{
+    position: absolute;
+    z-index: 1;
+    font-size: 10rem;
+    top: 4rem;
+    color: white;
+}
+
+.section
+{
+    position: relative;
+}
+
+.heading-2
+{
+    position: relative;
+    background-color: black;
+    color: white;
+    font-size: 5em;
+    padding: 30px;
+}
+
+.text
+{
+    position: relative;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    padding: 30px;
+    line-height: 35px;
+}
+
+.image
+{
+    height: var(--image-height);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#image-heading
+{
+    font-size: 4em;
+    background-color: white;
+    padding: 25px;
+}
+
+.bg-1
+{
+    background-image: url(biking.avif);
+   
+}
+.bg-2
+{
+    background-image: url(paragliding.jpg);
+}
+.bg-3
+{
+    background-image: url(surfing.jpg);
+}
+
+.responsive-text
+{
+    display: none;
+}
+
+@media (max-width:1100px)
+{
+.responsive-text
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-size: 25px;
+    font-weight: 600;
+    flex-wrap: wrap;
+    padding: 30px;
+    line-height: 35px;
+    background-color: black;
+    color: white;
+}
+
+.main-container
+{
+    display: none;
+}
+}
